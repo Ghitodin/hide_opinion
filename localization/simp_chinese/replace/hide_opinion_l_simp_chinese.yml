@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ action_powerful_vassal_not_on_council_label:0 "@powerful_vassal_icon!你的强力封臣[recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip]期望得到[GetPlayer.Custom( 'GetCouncilConcept' )|E]职位（）"
+ action_powerful_vassal_not_on_council_combined_label:0 "[recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip]（）"
+ action_not_endorsed_by_realm_priest_label:0 "@bishop_icon!不受你的[GetPlayer.GetCouncillorPosition( 'councillor_court_chaplain' ).GetPositionName ]拥护（）"
+ action_not_endorsed_by_realm_priest_desc:0 "你的[recipient.GetCouncilTitle][recipient.GetUIName]并不拥护你。\n\n#help 你应当确保[recipient.GetSheHe]对你有#P 正的#![opinion|E]。否则，[recipient.GetSheHe]不会给你提供任何[levies|E]和[taxes|E]！补救的最好措施是使用[GetScheme('sway').GetTypeName][scheme|E]。\n\n如果[recipient.GetHerHis]对你的好感度低于或等于#N -10#!，[recipient.GetSheHe]可能会开始干涉你的事务。#!"
+ OPINION_OF_HOST:0 ""
+ SurveyArrivalIntroOpinionLocGood:0 "\n$BULLET_WITH_TAB$改善@opinion_icon![opinion|E]（#bold #p #!#!）"
+ SurveyArrivalIntroOpinionLocBad:0 "\n$BULLET_WITH_TAB$改善@opinion_icon![opinion|E]（#bold #n #!#!）"
+ cooltip_opinion_of_player:0 ""
+ REALM_WINDOW_DIPLOMACY_TOOLTIP_CONFEDERATION_MEMBER_CHARACTER:0 "$TAB$[CHARACTER.GetUIName|U]\n$TAB$#TOOLTIP:STATIC_MODIFIER,prestige_level_[Character.GetPrestigeLevel] @prestige_level_[Character.GetPrestigeLevel]_icon!#!$TAB$[opinion|E]：#color:{[ToTextFormatColor(Character.GetOpinionOfTint( GetPlayer ))]} #!"
+ activity_tour_province_desc:0 "[ROOT.Province.GetName]拜访[ROOT.Province.GetTitle.GetHolder.GetName]\n你的[GetPlayer.Custom2('RelationToMe', ROOT.Province.GetTitle.GetHolder)]"

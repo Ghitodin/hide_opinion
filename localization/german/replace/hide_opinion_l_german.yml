@@ -1,0 +1,11 @@
+﻿l_german:
+ action_powerful_vassal_not_on_council_label:0 "@powerful_vassal_icon! [Select_CString(recipient.IsFemale, 'Eure mächtige Vasallin', 'Euer mächtiger Vasall')] [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip] erwartet einen Posten im ([GetPlayer.Custom('GetCouncilConcept')])"
+ action_powerful_vassal_not_on_council_combined_label:0 "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip]"
+ action_not_endorsed_by_realm_priest_label:0 "@bishop_icon! Nicht von Eurem [GetPlayer.GetCouncillorPosition('councillor_court_chaplain').GetPositionName] gebilligt"
+ action_not_endorsed_by_realm_priest_desc:0 "Euer [recipient.GetCouncilTitle] [recipient.GetUIName] billigt Euch nicht.\n\n#help Ihr solltet dafür sorgen, dass [recipient.Custom('DE_PRO_PER_S_3P_N')] eine #P positive#! [opinion|E] von Euch hat, da [recipient.Custom('DE_PRO_PER_S_3P_N')] Euch ansonsten keine [levies|E] oder [taxes|E] zukommen lässt! Der beste Weg, dies zu erreichen, ist die Verwendung des [Concept('scheme', 'Komplotts')|E] „[GetScheme('sway').GetTypeName]“.\n\nSinkt [recipient.Custom('DE_PRO_POS_S_3P')]e Meinung von Euch auf #N -10#! oder weniger, könnte [recipient.Custom('DE_PRO_PER_S_3P_N')] sich sogar in Eure Angelegenheiten einmischen.#!"
+ OPINION_OF_HOST:0 ""
+ SurveyArrivalIntroOpinionLocGood:0 "\n$BULLET_WITH_TAB$ Die @opinion_icon![opinion|E] zu verbessern"
+ SurveyArrivalIntroOpinionLocBad:0 "\n$BULLET_WITH_TAB$ Die @opinion_icon![opinion|E] zu verbessern"
+ cooltip_opinion_of_player:0 ""
+ REALM_WINDOW_DIPLOMACY_TOOLTIP_CONFEDERATION_MEMBER_CHARACTER:0 "$TAB$[CHARACTER.GetUIName|U]\n$TAB$#TOOLTIP:STATIC_MODIFIER,prestige_level_[Character.GetPrestigeLevel] @prestige_level_[Character.GetPrestigeLevel]_icon!#!"
+ activity_tour_province_desc:0 "Besucht [ROOT.Province.GetTitle.GetHolder.GetName] in [ROOT.Province.GetName]\n[Select_CString(ROOT.Province.GetTitle.GetHolder.IsFemale, 'Eure', 'Euer')] [GetPlayer.Custom2('RelationToMe', ROOT.Province.GetTitle.GetHolder)]"

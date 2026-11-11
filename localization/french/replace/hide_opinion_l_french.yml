@@ -1,0 +1,11 @@
+﻿l_french:
+ action_powerful_vassal_not_on_council_label:0 "@powerful_vassal_icon! Votre vassal[recipient.Custom('FR_E')] puissant[recipient.Custom('FR_E')], [recipient.Custom('FR_le_Char_U_P')][recipient.GetUINameNoTooltip][recipient.GetPrimaryTitle.Custom('GetTierIcon')], s’attend à un poste au [GetPlayer.Custom( 'GetCouncilConcept' )|E]"
+ action_powerful_vassal_not_on_council_combined_label:0 "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip]"
+ action_not_endorsed_by_realm_priest_label:0 "@bishop_icon! Votre [GetPlayer.GetCouncillorPosition( 'councillor_court_chaplain' ).GetPositionName|l] ne vous approuve pas"
+ action_not_endorsed_by_realm_priest_desc:0 "Votre [recipient.GetCouncilTitle|l] ([recipient.GetUIName]) ne vous approuve pas.\n\n#help Vous devriez vous assurer que son opinion à votre égard soit #P positive#!, autrement, il ne vous fournira ni [levies|El] ni [taxes|El] ! La meilleure façon d’y remédier est d’utiliser le [scheme|El] visant à [GetScheme('sway').GetActionName|l].\n\nSi son opinion envers vous est égale ou inférieure à #N -10#!, il pourrait commencer à interférer dans vos affaires.#!"
+ OPINION_OF_HOST:0 ""
+ SurveyArrivalIntroOpinionLocGood:0 "\n$BULLET_WITH_TAB$ Améliorer l’[opinion|El]@opinion_icon!"
+ SurveyArrivalIntroOpinionLocBad:0 "\n$BULLET_WITH_TAB$ Améliorer l’[opinion|El]@opinion_icon!"
+ cooltip_opinion_of_player:0 ""
+ REALM_WINDOW_DIPLOMACY_TOOLTIP_CONFEDERATION_MEMBER_CHARACTER:0 "$TAB$[CHARACTER.GetUIName|U]\n$TAB$#TOOLTIP:STATIC_MODIFIER,prestige_level_[Character.GetPrestigeLevel] @prestige_level_[Character.GetPrestigeLevel]_icon!#!$TAB$[opinion|E] : #color:{[ToTextFormatColor(Character.GetOpinionOfTint( GetPlayer ))]} #!"
+ activity_tour_province_desc:0 "Rendez visite [ROOT.Province.GetTitle.GetHolder.Custom('FR_au_Char_Pi')][ROOT.Province.GetTitle.GetHolder.GetTitledFirstName] en [ROOT.Province.GetName]\nVotre [GetPlayer.Custom2('RelationToMe', ROOT.Province.GetTitle.GetHolder)]"

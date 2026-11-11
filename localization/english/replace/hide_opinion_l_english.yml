@@ -1,0 +1,11 @@
+﻿l_english:
+ action_powerful_vassal_not_on_council_label:0 "@powerful_vassal_icon! Your Powerful Vassal, [recipient.GetPrimaryTitle.Custom('GetTierIcon')][recipient.GetUINameNoTooltip], expects a [GetPlayer.Custom( 'GetCouncilConcept' )|E] Position"
+ action_powerful_vassal_not_on_council_combined_label:0 "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip]"
+ action_not_endorsed_by_realm_priest_label:0 "@bishop_icon! Not endorsed by your [GetPlayer.GetCouncillorPosition( 'councillor_court_chaplain' ).GetPositionName ]"
+ action_not_endorsed_by_realm_priest_desc:0 "Your [recipient.GetCouncilTitle], [recipient.GetUIName], does not endorse you.\n\n#help You should ensure that [recipient.GetSheHe] has a #P positive#! [opinion|E] of you, otherwise [recipient.GetSheHe] will not provide you with any [levies|E] or [taxes|E]! The best way of remedying this is by using the [GetScheme('sway').GetTypeName] [scheme|E].\n\nIf [recipient.GetHerHis] Opinion of you is at or below #N -10#!, [recipient.GetSheHe] might start interfering in your affairs.#!"
+ OPINION_OF_HOST:0 ""
+ SurveyArrivalIntroOpinionLocGood:0 "\n$BULLET_WITH_TAB$ Improve @opinion_icon![opinion|E]"
+ SurveyArrivalIntroOpinionLocBad:0 "\n$BULLET_WITH_TAB$ Improve @opinion_icon![opinion|E]"
+ cooltip_opinion_of_player:0 ""
+ REALM_WINDOW_DIPLOMACY_TOOLTIP_CONFEDERATION_MEMBER_CHARACTER:0 "$TAB$[CHARACTER.GetUIName|U]\n$TAB$#TOOLTIP:STATIC_MODIFIER,prestige_level_[Character.GetPrestigeLevel] @prestige_level_[Character.GetPrestigeLevel]_icon!#!"
+ activity_tour_province_desc:0 "Visit [ROOT.Province.GetTitle.GetHolder.GetName] in [ROOT.Province.GetName]\nYour [GetPlayer.Custom2('RelationToMe', ROOT.Province.GetTitle.GetHolder)]"

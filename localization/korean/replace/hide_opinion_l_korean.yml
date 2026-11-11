@@ -1,0 +1,11 @@
+﻿l_korean:
+ action_powerful_vassal_not_on_council_label:0 "@powerful_vassal_icon! 권세 봉신 [recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip](이)가 [GetPlayer.Custom( 'GetCouncilConcept' )|E] 직위를 기대하고 있습니다."
+ action_powerful_vassal_not_on_council_combined_label:0 "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip]"
+ action_not_endorsed_by_realm_priest_label:0 "@bishop_icon! [GetPlayer.GetCouncillorPosition( 'councillor_court_chaplain' ).GetPositionName ](이)가 당신을 지지하지 않음"
+ action_not_endorsed_by_realm_priest_desc:0 "당신의 [recipient.GetCouncilTitle]인 [recipient.GetUIName](이)가 당신을 지지하지 않습니다.\n\n#help 대상이 당신을 향해 #P 긍정적#!인 [opinion|E]을 갖게 하십시오. 그렇지 않으면 [taxes|E]이나 [levies|E]을 전혀 제공하지 않을 것입니다! 의견을 개선하는 제일 좋은 방법은 [GetScheme('sway').GetTypeName] [scheme|E]을 사용하는 것입니다.\n\n만약 당신을 향한 [recipient.GetHerHis] 의견이 #N -10#! 이하로 떨어진다면, 당신의 일을 방해하기 시작할지도 모릅니다.#!"
+ OPINION_OF_HOST:0 ""
+ SurveyArrivalIntroOpinionLocGood:0 "\n$BULLET_WITH_TAB$ @opinion_icon![opinion|E] 개선"
+ SurveyArrivalIntroOpinionLocBad:0 "\n$BULLET_WITH_TAB$ @opinion_icon![opinion|E] 개선"
+ cooltip_opinion_of_player:0 ""
+ REALM_WINDOW_DIPLOMACY_TOOLTIP_CONFEDERATION_MEMBER_CHARACTER:0 "$TAB$[CHARACTER.GetUIName|U]\n$TAB$#TOOLTIP:STATIC_MODIFIER,prestige_level_[Character.GetPrestigeLevel] @prestige_level_[Character.GetPrestigeLevel]_icon!#!"
+ activity_tour_province_desc:0 "[ROOT.Province.GetName]에 있는 [ROOT.Province.GetTitle.GetHolder.GetName](을)를 방문함\n당신의 [GetPlayer.Custom2('RelationToMe', ROOT.Province.GetTitle.GetHolder)]"

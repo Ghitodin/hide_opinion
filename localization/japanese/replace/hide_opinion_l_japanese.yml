@@ -1,0 +1,11 @@
+﻿l_japanese:
+ action_powerful_vassal_not_on_council_label:0 "@powerful_vassal_icon! あなたの有力な封臣[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip]が[GetPlayer.Custom( 'GetCouncilConcept' )|E]の役職（）を期待している"
+ action_powerful_vassal_not_on_council_combined_label:0 "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip] （）"
+ action_not_endorsed_by_realm_priest_label:0 "@bishop_icon! あなたの[GetPlayer.GetCouncillorPosition( 'councillor_court_chaplain' ).GetPositionName]に支持されていない（）"
+ action_not_endorsed_by_realm_priest_desc:0 "あなたの[recipient.GetCouncilTitle]、[recipient.GetUIName]はあなたを支持していません。\n\n#help [recipient.GetSheHe]のあなたへの[opinion|E]が#P プラス#!になるようにしなければ、[recipient.GetSheHe]はあなたに[levies|E]や[taxes|E]を支払いません！最善の解決策は[GetScheme('sway').GetTypeName] [scheme|E]を利用することです。\n\n[recipient.GetHerHis]あなたへの好感度が#N -10#!以下になると、[recipient.GetSheHe]があなたを妨害する可能性があります。#!"
+ OPINION_OF_HOST:0 ""
+ SurveyArrivalIntroOpinionLocGood:0 "\n$BULLET_WITH_TAB$@opinion_icon! [opinion|E]を改善（#bold #p #!#!）"
+ SurveyArrivalIntroOpinionLocBad:0 "\n$BULLET_WITH_TAB$@opinion_icon! [opinion|E]を改善（#bold #n #!#!）"
+ cooltip_opinion_of_player:0 ""
+ REALM_WINDOW_DIPLOMACY_TOOLTIP_CONFEDERATION_MEMBER_CHARACTER:0 "$TAB$[CHARACTER.GetUIName|U]\n$TAB$#TOOLTIP:STATIC_MODIFIER,prestige_level_[Character.GetPrestigeLevel] @prestige_level_[Character.GetPrestigeLevel]_icon!#!$TAB$[opinion|E]：#color:{[ToTextFormatColor(Character.GetOpinionOfTint( GetPlayer ))]} #!"
+ activity_tour_province_desc:0 "[ROOT.Province.GetName]の[ROOT.Province.GetTitle.GetHolder.GetName]を訪問\nあなたの[GetPlayer.Custom2('RelationToMe', ROOT.Province.GetTitle.GetHolder)]"

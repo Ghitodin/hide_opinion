@@ -1,0 +1,11 @@
+﻿l_polish:
+ action_powerful_vassal_not_on_council_label:0 "@powerful_vassal_icon! Twój wasal wpływowy, [recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNotMeNoTooltip], oczekuje stanowiska w instytucji, którą jest [GetPlayer.Custom( 'GetCouncilConcept' )|El]"
+ action_powerful_vassal_not_on_council_combined_label:0 "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNotMeNoTooltip]"
+ action_not_endorsed_by_realm_priest_label:0 "@bishop_icon! [GetPlayer.GetCouncillorPosition( 'councillor_court_chaplain' ).GetPositionName ] cię nie popiera"
+ action_not_endorsed_by_realm_priest_desc:0 "[Select_CString(recipient.IsFemale, 'Twoja', 'Twój' )] [recipient.GetCouncilTitle|l], [recipient.GetUINameNotMe], nie popiera cię.\n\n#help Upewnij się, że ma o tobie #P pozytywną#! [Concept( 'opinion', 'opinię' )|E], w przeciwnym razie nie dostarczy ci żadnego [Concept( 'levies', 'pospolitego ruszenia' )|E] ani [Concept( 'taxes', 'podatków' )|E]! Najlepszym sposobem na zapobieżenie temu jest rozpoczęcie [Concept( 'scheme', 'spisku' )|E] „[GetScheme('sway').GetTypeName]”.\n\nJeśli [recipient.GetHerHis] opinia o tobie wynosi #N -10#! lub mniej, może zacząć ingerować w twoje sprawy.#!"
+ OPINION_OF_HOST:0 ""
+ SurveyArrivalIntroOpinionLocGood:0 "\n$BULLET_WITH_TAB$ Poprawienie @opinion_icon! [Concept('opinion', 'opinii')|E]"
+ SurveyArrivalIntroOpinionLocBad:0 "\n$BULLET_WITH_TAB$ Poprawienie @opinion_icon! [Concept('opinion', 'opinii')|E]"
+ cooltip_opinion_of_player:0 ""
+ REALM_WINDOW_DIPLOMACY_TOOLTIP_CONFEDERATION_MEMBER_CHARACTER:0 "$TAB$[CHARACTER.GetUINameNotMe]\n$TAB$#TOOLTIP:STATIC_MODIFIER,prestige_level_[Character.GetPrestigeLevel] @prestige_level_[Character.GetPrestigeLevel]_icon!#!"
+ activity_tour_province_desc:0 "Odwiedź postać znaną jako [ROOT.Province.GetTitle.GetHolder.GetName] w miejscu o nazwie [ROOT.Province.GetName]\n[GetPlayer.Custom2('RelationToMe', ROOT.Province.GetTitle.GetHolder)|U]"

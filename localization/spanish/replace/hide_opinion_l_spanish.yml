@@ -1,0 +1,11 @@
+﻿l_spanish:
+ action_powerful_vassal_not_on_council_label:0 "@powerful_vassal_icon! Tu vasallo poderoso, [recipient.GetUINameNoTooltip] [recipient.GetPrimaryTitle.Custom('GetTierIcon')], espera un cargo en el [GetPlayer.Custom( 'GetCouncilConcept' )|lE]"
+ action_powerful_vassal_not_on_council_combined_label:0 "[recipient.GetPrimaryTitle.Custom('GetTierIcon')] [recipient.GetUINameNoTooltip]"
+ action_not_endorsed_by_realm_priest_label:0 "@bishop_icon! No cuentas con el apoyo de tu [GetPlayer.GetCouncillorPosition( 'councillor_court_chaplain' ).GetPositionName ]"
+ action_not_endorsed_by_realm_priest_desc:0 "[recipient.GetUIName], tu [recipient.GetCouncilTitle|l], no te respalda.\n\n#help Debes asegurarte de que tenga una [opinion|lE] #P positiva#! de ti. Si no, ¡no te proporcionará [levies|lE] ni [taxes|lE]! El mejor modo de solucionarlo es usar la [scheme|lE] de [GetScheme('sway').GetTypeName|l]\n\nSi su opinión sobre ti es #N -10#! o menor, podría interferir en tus asuntos.#!"
+ OPINION_OF_HOST:0 ""
+ SurveyArrivalIntroOpinionLocGood:0 "\n$BULLET_WITH_TAB$ Mejorar la [opinion|lE] @opinion_icon!"
+ SurveyArrivalIntroOpinionLocBad:0 "\n$BULLET_WITH_TAB$ Mejorar la [opinion|lE] @opinion_icon!"
+ cooltip_opinion_of_player:0 ""
+ REALM_WINDOW_DIPLOMACY_TOOLTIP_CONFEDERATION_MEMBER_CHARACTER:0 "$TAB$[CHARACTER.GetUIName|U]\n$TAB$#TOOLTIP:STATIC_MODIFIER,prestige_level_[Character.GetPrestigeLevel] @prestige_level_[Character.GetPrestigeLevel]_icon!#!"
+ activity_tour_province_desc:0 "Visita a [ROOT.Province.GetTitle.GetHolder.GetName] en [ROOT.Province.GetName]\nTu [GetPlayer.Custom2('RelationToMe', ROOT.Province.GetTitle.GetHolder)]"
