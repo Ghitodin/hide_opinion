@@ -2198,6 +2198,7 @@ types IntrigueWindowTypes
 							size = { 20 20 }
 
 							tooltip = "[Character.GetPlayerInteractionWithTargetSecretTooltip( 'blackmail_interaction', Secret.Self )]"
+							tooltip_visible = "[Not( HideOpinionIsDomesticRecipient( Character.Self ) )]"
 						}
 					}
 				}

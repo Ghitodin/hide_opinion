@@ -1,0 +1,11 @@
+hide_opinion_domestic_recipient = {
+    scope = character
+    saved_scopes = { liege_or_host }
+
+    is_valid = {
+        OR = {
+            is_vassal_or_below_of = scope:liege_or_host
+            is_courtier_of = scope:liege_or_host
+        }
+    }
+}

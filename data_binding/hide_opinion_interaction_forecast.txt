@@ -1,0 +1,51 @@
+# Interactions that can be refused by the player court or vassals.
+
+macro = {
+	definition = "HideOpinionForecastGroup1(Interaction)"
+	replace_with = "Or( Or( Or( ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'ask_for_conversion_courtier_interaction' ).Self ), ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'blackmail_interaction' ).Self ) ), Or( ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'castrate_child_interaction' ).Self ), ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'contest_appointment_interaction' ).Self ) ) ), Or( Or( ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'decommission_mandala_temple_interaction' ).Self ), ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'demand_admin_interaction' ).Self ) ), Or( ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'demand_conversion_interaction' ).Self ), ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'demand_conversion_vassal_ruler_interaction' ).Self ) ) ) )"
+}
+
+macro = {
+	definition = "HideOpinionForecastGroup2(Interaction)"
+	replace_with = "Or( Or( Or( ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'demand_divorce_interaction' ).Self ), ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'diarch_imprison_interaction' ).Self ) ), Or( ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'diarch_retract_vassal_interaction' ).Self ), ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'diarch_revoke_title_interaction' ).Self ) ) ), Or( Or( ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'force_abdication_interaction' ).Self ), ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'force_duel_anyone_interaction' ).Self ) ), Or( ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'force_duel_criminals_interaction' ).Self ), ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'force_governor_removal_interaction' ).Self ) ) ) )"
+}
+
+macro = {
+	definition = "HideOpinionForecastGroup3(Interaction)"
+	replace_with = "Or( Or( Or( ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'force_step_down_interaction' ).Self ), ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'house_head_request_interaction' ).Self ) ), Or( ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'imprison_interaction' ).Self ), ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'influence_child_commander_interaction' ).Self ) ) ), Or( Or( ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'influence_child_personality_interaction' ).Self ), ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'invite_to_activity_interaction' ).Self ) ), Or( ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'liege_dismiss_entrenched_regency_interaction' ).Self ), ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'mpo_retrieve_land_from_herder_interaction' ).Self ) ) ) )"
+}
+
+macro = {
+	definition = "HideOpinionForecastGroup4(Interaction)"
+	replace_with = "Or( Or( Or( ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'noble_family_adoption_interaction' ).Self ), ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'pam_evangelize_personal_tenet_interaction' ).Self ) ), Or( ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'pam_reaffirm_doctrine_interaction' ).Self ), ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'pam_sway_schism_stance_interaction' ).Self ) ) ), Or( Or( ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'propose_best_friendship_interaction' ).Self ), ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'reaffirm_best_friendship_interaction' ).Self ) ), Or( ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'request_clerical_chastity_interaction' ).Self ), ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'retract_vassal_interaction' ).Self ) ) ) )"
+}
+
+macro = {
+	definition = "HideOpinionForecastGroup5(Interaction)"
+	replace_with = "Or( Or( Or( ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'revoke_title_interaction' ).Self ), ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'send_to_holy_order_interaction' ).Self ) ), Or( ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'stop_attacker_vassal_war_interaction' ).Self ), ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'stop_defender_vassal_war_interaction' ).Self ) ) ), Or( Or( ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'sway_courtier_to_my_rite_interaction' ).Self ), ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'sway_vassal_to_my_rite_interaction' ).Self ) ), Or( ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'synergise_friendship_interaction' ).Self ), ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'take_monastic_vows_interaction' ).Self ) ) ) )"
+}
+
+macro = {
+	definition = "HideOpinionForecastGroup6(Interaction)"
+	replace_with = "Or( ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'take_vows_interaction' ).Self ), ObjectsEqual( Interaction.Self, GetCharacterInteraction( 'turn_subject_into_mandala_interaction' ).Self ) )"
+}
+
+macro = {
+	definition = "HideOpinionIsDomesticRecipient(Recipient)"
+	replace_with = "And( Recipient.IsValid, GetScriptedGui( 'hide_opinion_domestic_recipient' ).IsValid( GuiScope.SetRoot( Recipient.MakeScope ).AddScope( 'liege_or_host', GetPlayer.MakeScope ).End ) )"
+}
+
+macro = {
+	definition = "HideOpinionHidesInteractionForecast(Interaction,Recipient)"
+	replace_with = "And( HideOpinionIsDomesticRecipient( Recipient ), Or( Or( HideOpinionForecastGroup1( Interaction ), Or( HideOpinionForecastGroup2( Interaction ), HideOpinionForecastGroup3( Interaction ) ) ), Or( HideOpinionForecastGroup4( Interaction ), Or( HideOpinionForecastGroup5( Interaction ), HideOpinionForecastGroup6( Interaction ) ) ) ) )"
+}
+
+macro = {
+	definition = "HideOpinionHidesCurrentForecast"
+	replace_with = "HideOpinionHidesInteractionForecast( CharacterInteractionConfirmationWindow.GetInteraction, CharacterInteractionConfirmationWindow.GetRecipient )"
+}
+
+macro = {
+	definition = "HideOpinionShowsResistanceWarning"
+	replace_with = "And( HideOpinionHidesCurrentForecast, Or( Or( ObjectsEqual( CharacterInteractionConfirmationWindow.GetInteraction.Self, GetCharacterInteraction( 'diarch_imprison_interaction' ).Self ), Or( ObjectsEqual( CharacterInteractionConfirmationWindow.GetInteraction.Self, GetCharacterInteraction( 'diarch_retract_vassal_interaction' ).Self ), ObjectsEqual( CharacterInteractionConfirmationWindow.GetInteraction.Self, GetCharacterInteraction( 'diarch_revoke_title_interaction' ).Self ) ) ), Or( ObjectsEqual( CharacterInteractionConfirmationWindow.GetInteraction.Self, GetCharacterInteraction( 'imprison_interaction' ).Self ), Or( ObjectsEqual( CharacterInteractionConfirmationWindow.GetInteraction.Self, GetCharacterInteraction( 'retract_vassal_interaction' ).Self ), ObjectsEqual( CharacterInteractionConfirmationWindow.GetInteraction.Self, GetCharacterInteraction( 'revoke_title_interaction' ).Self ) ) ) ) )"
+}
