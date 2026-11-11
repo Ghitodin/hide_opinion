@@ -49,3 +49,8 @@ macro = {
 	definition = "HideOpinionShowsResistanceWarning"
 	replace_with = "And( HideOpinionHidesCurrentForecast, Or( Or( ObjectsEqual( CharacterInteractionConfirmationWindow.GetInteraction.Self, GetCharacterInteraction( 'diarch_imprison_interaction' ).Self ), Or( ObjectsEqual( CharacterInteractionConfirmationWindow.GetInteraction.Self, GetCharacterInteraction( 'diarch_retract_vassal_interaction' ).Self ), ObjectsEqual( CharacterInteractionConfirmationWindow.GetInteraction.Self, GetCharacterInteraction( 'diarch_revoke_title_interaction' ).Self ) ) ), Or( ObjectsEqual( CharacterInteractionConfirmationWindow.GetInteraction.Self, GetCharacterInteraction( 'imprison_interaction' ).Self ), Or( ObjectsEqual( CharacterInteractionConfirmationWindow.GetInteraction.Self, GetCharacterInteraction( 'retract_vassal_interaction' ).Self ), ObjectsEqual( CharacterInteractionConfirmationWindow.GetInteraction.Self, GetCharacterInteraction( 'revoke_title_interaction' ).Self ) ) ) ) )"
 }
+
+macro = {
+	definition = "HideOpinionSuppressesInteractionMenuTooltip"
+	replace_with = "Or( ObjectsEqual( InteractionItem.GetCharacterInteraction.Self, GetCharacterInteraction( 'perk_alliance_interaction' ).Self ), Or( ObjectsEqual( InteractionItem.GetCharacterInteraction.Self, GetCharacterInteraction( 'request_excommunication_interaction' ).Self ), ObjectsEqual( InteractionItem.GetCharacterInteraction.Self, GetCharacterInteraction( 'petition_head_of_faith_excommunication_setup_interaction' ).Self ) ) )"
+}

@@ -2529,6 +2529,7 @@ types CharacterInteraction
 				button = {
 					visible = "[Not( InteractionItem.IsMarriageSetting )]"
 					tooltip = "[Select_CString( HideOpinionHidesInteractionForecast( InteractionItem.GetCharacterInteraction, CharacterInteractionMenuWindow.GetCharacter ), InteractionItem.GetName, InteractionItem.GetTooltip )]"
+					tooltip_visible = "[Not( HideOpinionSuppressesInteractionMenuTooltip )]"
 					size = { 317 30 }
 					
 					icon = {
@@ -2783,6 +2784,7 @@ types CharacterInteraction
 
 								visible = "[And( InteractionItem.HasWarningIcon, Not( HideOpinionHidesInteractionForecast( InteractionItem.GetCharacterInteraction, CharacterInteractionMenuWindow.GetCharacter ) ) )]"
 								tooltip = "[InteractionItem.GetWarningTooltipDesc]"
+								tooltip_visible = "[Not( HideOpinionSuppressesInteractionMenuTooltip )]"
 								size = { @interaction_item_column_width  @interaction_item_column_width  }
 
 								warning_icon = {
