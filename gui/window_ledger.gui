@@ -4295,6 +4295,7 @@ types LedgerTypes {
 		item = {
 			widget = {
 				alwaystransparent = no
+				visible = "[Not( Or3( EqualTo_string( CharacterListSortItem.GetName, Localize('SORT_OPINION') ), EqualTo_string( CharacterListSortItem.GetName, Localize('CHARACTER_SORT_OPINION_OF_LIEGE') ), EqualTo_string( CharacterListSortItem.GetName, Localize('CONFEDERATION_SORT_OPTION_OPINION') ) ) )]"
 				block "size_dropdown" {
 					size = { @drop 33 }
 				}
@@ -4327,7 +4328,6 @@ types LedgerTypes {
 						default_format = "#clickable"
 						tooltip_visible = no
 						block "text_button_drop" {
-							enabled = "[Not( Or3( EqualTo_string( CharacterListSortItem.GetName, Localize('SORT_OPINION') ), EqualTo_string( CharacterListSortItem.GetName, Localize('CHARACTER_SORT_OPINION_OF_LIEGE') ), EqualTo_string( CharacterListSortItem.GetName, Localize('CONFEDERATION_SORT_OPTION_OPINION') ) ) )]"
 							text = "[CharacterListSortItem.GetName]"
 						}
 					}

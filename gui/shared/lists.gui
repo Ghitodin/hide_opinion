@@ -859,6 +859,7 @@ types Lists
 		item = {
 			widget = {
 				alwaystransparent = no
+				visible = "[Not( Or3( EqualTo_string( CharacterListSortItem.GetName, Localize('SORT_OPINION') ), EqualTo_string( CharacterListSortItem.GetName, Localize('CHARACTER_SORT_OPINION_OF_LIEGE') ), EqualTo_string( CharacterListSortItem.GetName, Localize('CONFEDERATION_SORT_OPTION_OPINION') ) ) )]"
 				block "size_dropdown" {
 					size = { 190 33 }
 				}
@@ -882,7 +883,6 @@ types Lists
 						size = { 190 33 }
 					}
 					block "text_button_drop" {
-						enabled = "[Not( Or3( EqualTo_string( CharacterListSortItem.GetName, Localize('SORT_OPINION') ), EqualTo_string( CharacterListSortItem.GetName, Localize('CHARACTER_SORT_OPINION_OF_LIEGE') ), EqualTo_string( CharacterListSortItem.GetName, Localize('CONFEDERATION_SORT_OPTION_OPINION') ) ) )]"
 						text = "[CharacterListSortItem.GetName]"
 					}
 
