@@ -577,7 +577,7 @@ window = {
 					portrait_opinion = {
 						name = "religious_superior_opinion"
 						datacontext = "[CharacterWindow.GetCharacter]"
-						visible = "[And( And( Character.GetLiege.IsValid, And( Character.IsAlive, Not(Character.IsLocalPlayer ) ) ), Not( Character.GetLiege.IsLocalPlayer ) )]"
+						visible = no
 
 						blockoverride "dread_logic" {
 							visible = "[Character.ShouldShowDreadEffectIconFor( Character.GetLiege )]"
@@ -685,7 +685,7 @@ window = {
 						name = "liege_opinion"
 
 						datacontext = "[CharacterWindow.GetCharacter]"
-						visible = "[And( And( Character.GetLiege.IsValid, And( Character.IsAlive, Not(Character.IsLocalPlayer ) ) ), Not( Character.GetLiege.IsLocalPlayer ) )]"
+						visible = no
 
 						blockoverride "dread_logic" {
 							visible = "[Character.ShouldShowDreadEffectIconFor( Character.GetLiege )]"
