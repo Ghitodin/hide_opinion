@@ -3,5 +3,5 @@ tags={
 	"Graphics"
 }
 name="Hide opinion"
-supported_version="1.20.1.2"
+supported_version="1.21.0"
 remote_file_id="3837955909"

@@ -687,7 +687,7 @@ window = {
 						text = DIARCHY_WINDOW_END_DIARCHY
 
 						tooltip = "[Character.GetPlayerInteractionTooltip( DiarchyWindow.GetEndInteractionName )]"
-						tooltip_visible = "[Not( HideOpinionHidesInteractionForecast( GetCharacterInteraction( DiarchyWindow.GetEndInteractionName ) ) )]"
+						tooltip_visible = "[Not( HideOpinionHidesInteractionForecast( GetCharacterInteraction( DiarchyWindow.GetEndInteractionName ), Character ) )]"
 						tooltip_when_disabled = "[Character.GetPlayerInteractionValidBlockers(DiarchyWindow.GetEndInteractionName)]"
 						icon = {
 							position = { 4 4 }

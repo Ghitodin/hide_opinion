@@ -82,7 +82,7 @@ window = {
 
 						portrait_opinion = {
 							name = "liege_opinion"
-							visible = "[And( Not(Character.GetLiege.IsLocalPlayer), Not( Character.GetLiege.IsLocalPlayer ) )]"
+							visible = "[Not(Character.GetLiege.IsLocalPlayer)]"
 						
 							blockoverride "opinion_text"
 							{
