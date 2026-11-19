@@ -1,4 +1,4 @@
-# Interactions that can be refused by the player court or vassals.
+﻿# Interactions that can be refused by the player court or vassals.
 
 macro = {
 	definition = "HideOpinionForecastGroup1(Interaction)"

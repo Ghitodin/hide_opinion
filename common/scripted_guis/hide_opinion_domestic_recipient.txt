@@ -1,4 +1,4 @@
-hide_opinion_domestic_recipient = {
+﻿hide_opinion_domestic_recipient = {
     scope = character
     saved_scopes = { liege_or_host }
 
